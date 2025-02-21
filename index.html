@@ -23,18 +23,23 @@
     }
 
     .control-button {
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
       border: none;
       background: transparent;
       align-items: center;
       justify-content: center;
+      margin: 3px
     }
 
     .control-button i {
       color: white;
       font-size: 15pt;
+    }
+
+    .flex-spacer {
+      flex-grow: 1;
     }
   </style>
 </head>
@@ -54,6 +59,12 @@
       </button>
       <button class="control-button js-mute-button" hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
+      </button>
+
+      <div class="flex-spacer"></div>
+
+      <button class="control-button js-fullscreen-button">
+        <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
     </div>
   </div>
