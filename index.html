@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     .player {
       width: 800px;
@@ -18,7 +21,7 @@
       flex-grow: 1;
     }
 
-    .controls {
+    .bottom-controls {
       background: black;
       display: flex;
     }
@@ -31,7 +34,7 @@
       background: transparent;
       align-items: center;
       justify-content: center;
-      margin: 3px
+      margin: 2px
     }
 
     .control-button i {
@@ -39,7 +42,30 @@
       font-size: 15pt;
     }
 
-    .flex-spacer {
+    .viewing-progressbar {
+      flex-grow: 1;
+      height: 4.5px;
+      background-color: grey;
+      position: relative;
+      border-radius: 1px;
+      overflow: hidden;
+      margin: 10px;
+    }
+
+    .viewing-progressbar-slider {
+      width: 0%;
+      height: 100%;
+      background-color: red;
+      position: absolute;
+    }
+
+    .viewing-panel {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16.5px;
+      color: white;
+      display: flex;
+      align-items: center;
       flex-grow: 1;
     }
   </style>
@@ -48,28 +74,40 @@
   <div id="player" class="player">
     <div class="video-container js-video-container"></div>
 
-    <div class="controls">
-      <button class="control-button js-play-button">
-        <i class="fa fa-play" aria-hidden="true"></i>
-      </button>
+    <div class="bottom-controls">
+      <div class="left-buttons">
+        <button class="control-button js-play-button">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
 
-      <button class="control-button js-pause-button" hidden>
-        <i class="fa fa-pause" aria-hidden="true"></i>
-      </button>
+        <button class="control-button js-pause-button" hidden>
+          <i class="fa fa-pause" aria-hidden="true"></i>
+        </button>
 
-      <button class="control-button js-volume-button">
-        <i class="fa fa-volume-off" aria-hidden="true"></i>
-      </button>
+        <button class="control-button js-volume-button">
+          <i class="fa fa-volume-off" aria-hidden="true"></i>
+        </button>
 
-      <button class="control-button js-mute-button" hidden>
-        <i class="fa fa-volume-up" aria-hidden="true"></i>
-      </button>
+        <button class="control-button js-mute-button" hidden>
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="viewing-panel">
+        <span class="viewing-time js-current-time"></span>
+          <div class="viewing-progressbar js-progress" style="background-color: grey;">
+            <div class="viewing-progressbar-slider js-progress-slider" style="background-color: red;"></div>
+          </div>
+        <span class="video-duration js-duration"></span>
+      </div>
 
       <div class="flex-spacer"></div>
 
-      <button class="control-button js-fullscreen-button">
-        <i class="fa fa-expand" aria-hidden="true"></i>
-      </button>
+      <div class="right-buttons">
+        <button class="control-button js-fullscreen-button">
+          <i class="fa fa-expand" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </div>
 
