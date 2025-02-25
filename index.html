@@ -37,6 +37,10 @@
       margin: 2px
     }
 
+    .right-buttons {
+      margin-right: 2px;
+    }
+
     .control-button i {
       color: white;
       font-size: 15pt;
@@ -44,11 +48,10 @@
 
     .viewing-progressbar {
       flex-grow: 1;
-      height: 4.5px;
+      height: 4.6px;
       background-color: grey;
       position: relative;
-      border-radius: 1px;
-      overflow: hidden;
+      border-radius: 1.7px;
       margin: 10px;
     }
 
@@ -68,6 +71,24 @@
       align-items: center;
       flex-grow: 1;
     }
+
+    .dot {
+      color: red;
+      height: 8px;
+      width: 8px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-style: solid;
+      border-width: 3px;
+      border-color: white;
+      position: absolute;
+      left: 100%;
+      opacity: 1;
+      margin: -4.5px;
+      transform: translateX(-20.75%)
+    }
+
   </style>
 </head>
 <body>
@@ -95,8 +116,10 @@
 
       <div class="viewing-panel">
         <span class="viewing-time js-current-time"></span>
-          <div class="viewing-progressbar js-progress" style="background-color: grey;">
-            <div class="viewing-progressbar-slider js-progress-slider" style="background-color: red;"></div>
+          <div class="viewing-progressbar js-progress">
+            <div class="viewing-progressbar-slider js-progress-slider">
+              <div class="dot"></div>
+            </div>
           </div>
         <span class="video-duration js-duration"></span>
       </div>
