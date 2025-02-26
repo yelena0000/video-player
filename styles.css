@@ -16,7 +16,6 @@
 }
 
 .control-button {
-  display: flex;
   width: 30px;
   height: 40px;
   cursor: pointer;
