@@ -1,6 +1,6 @@
 ## Описание
 
-<img width="861" alt="image" src="https://github.com/user-attachments/assets/70507018-faaa-41c1-bc3d-d50d704d1dad" />
+![Снимок экрана_26-2-2025_33532_localhost](https://github.com/user-attachments/assets/ee4133a0-084c-4410-af36-d7fb54973293)
 
 Простой видеоплеер с элементами управления:
 
