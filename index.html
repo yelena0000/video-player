@@ -48,10 +48,9 @@
 
     .viewing-progressbar {
       flex-grow: 1;
-      height: 4.6px;
-      background-color: grey;
+      height: 4.67px;
+      background-color: none;
       position: relative;
-      border-radius: 1.7px;
       margin: 10px;
     }
 
@@ -60,6 +59,7 @@
       height: 100%;
       background-color: red;
       position: absolute;
+      border-radius: 1.6px;
     }
 
     .viewing-panel {
@@ -86,7 +86,7 @@
       left: 100%;
       opacity: 0;
       margin: -4.5px;
-      transform: translateX(-20.75%)
+      transform: translateX(-20.75%);
       transition-property: opacity;
       transition-duration: 300ms;
       transition-timing-function: ease-in, ease-out;
@@ -96,6 +96,9 @@
     opacity: 1;
     }
 
+    .control-button:focus {
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -130,8 +133,6 @@
           </div>
         <span class="video-duration js-duration"></span>
       </div>
-
-      <div class="flex-spacer"></div>
 
       <div class="right-buttons">
         <button class="control-button js-fullscreen-button">
